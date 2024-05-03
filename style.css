@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: rgb(33, 30, 30);
+  font-family: sans-serif;
+}
+.posts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 60px;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 370px;
+  color: #fff;
+  background-color: rgb(23, 21, 21);
+  padding: 12px 15px;
+  border-radius: 17px;
+  border: 2px solid #000;
+  justify-content: space-between;
+}
+.post-image {
+  height: 240px;
+  display: inline-block;
+  background-size: cover;
+  border-radius: 17px 17px 0 0;
+}
+
+h3 {
+  margin: 15px 0;
+}
+
+.card > a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* ВЫТАЩИЛИ    $post_content = $post->find('.post-content')->html(); */
+/* .post-category,
+.post-name,
+.post-lead {
+  display: block;
+  margin-bottom: 10px;
+}
+.post-category {
+  color: red;
+}
+.post-name {
+  font-style: 22px;
+  font-weight: bold;
+} */
+.post-lead {
+  margin: 15px 0;
+  font-family: "Times New Roman";
+  font-size: 18px;
+}
+/* time */
+.pull-right {
+  color: red;
+  align-self: flex-end;
+}
+/* анимаия
+https://ilda.top/animatsiya-teksta-perelivayushchiysya-cvet
+ */
+.animation {
+  background: linear-gradient(
+    90deg,
+    #e933ff,
+    #ffb400,
+    #fbff00,
+    #ff33be,
+    #e933ff
+  );
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textflow 5s linear infinite;
+}
+@keyframes textflow {
+  from {
+    background-position: 0% center;
+  }
+  to {
+    background-position: 200% center;
+  }
+}
+/* .card > a:hover > .animation {
+  animation-play-state: paused;
+} */
